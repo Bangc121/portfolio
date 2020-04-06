@@ -8,9 +8,9 @@ export default () => (
   <Router>
     <>
       <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/project" exact component={Project} />
-        <Route path="/project/:id" component={Detail} />
+        <Route path="https://bangc121.github.io/portfolio/" exact component={Home} />
+        <Route path="https://bangc121.github.io/portfolio/project" exact component={Project} />
+        <Route path="https://bangc121.github.io/portfolio/project/:id" component={Detail} />
         <Redirect from="*" to="/" />
       </Switch>
     </>
