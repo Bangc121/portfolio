@@ -123,8 +123,8 @@ export default function HomePresenter() {
           <Line />
         </div>
         <SectionSkills />
-        <SectionProjects />
-        <SectionBlog />
+        {/* <SectionProjects />
+        <SectionBlog /> */}
       </div>
       <Footer />
     </div>
