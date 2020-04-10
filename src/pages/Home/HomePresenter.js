@@ -123,11 +123,11 @@ export default function HomePresenter() {
           <Line />
         </div>
       </div>
-      <div className={classNames(classes.main)}>
+      {/* <div className={classNames(classes.main)}>
         <SectionSkills />
         <SectionProjects />
         <SectionBlog />
-      </div>
+      </div> */}
       <Footer />
     </div>
   );
