@@ -8,7 +8,7 @@ import styles from "assets/jss/material-kit-react/views/componentsSections/basic
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import './SectionCustomStyle.css'
+// import './SectionCustomStyle.css'
 import Slider from "react-slick";
 import Button from '@material-ui/core/Button';
 
@@ -88,9 +88,11 @@ function SamplePrevArrow(props) {
 export default function SectionBlog() {
   const classes = useStyles();
   var settings = {
+    autoplay: true,
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 5000,
+    autoplaySpeed: 100,
     slidesToShow: 4,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,

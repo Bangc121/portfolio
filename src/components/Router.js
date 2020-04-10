@@ -4,6 +4,7 @@ import ScrollToTop from './ScrollToTop';
 import Home from "pages/Home";
 import Resume from "pages/Resume";
 import Fillgi from "pages/Fillgi";
+import Tictoc from "pages/Tictoc";
 
 export default () => (
   <Router>
@@ -13,6 +14,7 @@ export default () => (
           <Route path="/" exact component={Home} />
           <Route path="/resume" component={Resume} />
           <Route path="/Fillgi" component={Fillgi} />
+          <Route path="/Tictoc" component={Tictoc} />
           <Redirect from="*" to="/" />
         </Switch>
       </ScrollToTop>

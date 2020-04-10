@@ -16,6 +16,15 @@ const GlobalStyles = createGlobalStyle`
         background-color:rgba(255, 255, 255, 1);
         color: black;
     }
+    .slick-prev:before {
+        color: black;
+        font-size: 25px;
+    }
+
+    .slick-next:before {
+        color: black;
+        font-size: 25px;
+    }
 `;
 
 export default GlobalStyles;
