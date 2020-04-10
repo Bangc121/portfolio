@@ -90,7 +90,6 @@ export default function HomePresenter() {
             <GridItem xs={12} sm={12} md={6}>
               <div className={classes.profile}>
                 <div>
-                  {/* <Image bgUrl={image} /> */}
                   <img src={image} alt="..." className={imageClasses} />
                 </div>
                 <div className={classes.name}>
@@ -121,9 +120,6 @@ export default function HomePresenter() {
               </Link>
             </div>
           </ButtonDiv>
-          {/* <Button style={{justifyContent: 'center'}}>
-            <h5>자기소개 더보기</h5>
-          </Button> */}
           <Line />
         </div>
       </div>
