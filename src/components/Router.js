@@ -1,18 +1,23 @@
 import React from "react";
-import { HashRouter as Router, Route, Redirect, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-dom";
+import ScrollToTop from './ScrollToTop';
 import Home from "pages/Home";
-import Project from "pages/Project";
 import Detail from "pages/Detail";
+import Resume from "pages/Resume";
+import Fillgi from "pages/Fillgi";
 
 export default () => (
   <Router>
     <>
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/project" exact component={Project} />
-        <Route path="/project/:id" component={Detail} />
-        <Redirect from="*" to="/" />
-      </Switch>
+      <ScrollToTop>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/resume" exact component={Resume} />
+          <Route path="/Fillgi" exact component={Fillgi} />
+          <Route path="/:id" component={Detail} />
+          <Redirect from="*" to="/" />
+        </Switch>
+      </ScrollToTop>
     </>
   </Router>
 );

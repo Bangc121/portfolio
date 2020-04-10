@@ -21,6 +21,25 @@ export default function HeaderLinks(props) {
   const classes = useStyles();
   return (
     <List className={classes.list}>
+      {" "}
+      <ListItem className={classes.listItem}>
+        <Button
+          color="transparent"
+          className={classes.navLink + " " + classes.socialIconsButton}
+        >
+          <i
+            className={
+              classes.socialIcons +
+              " " +
+              classes.marginRight5 +
+              " fab fa-facebook"
+            }
+          />{" "}
+          <Link to="/resume" className={classes.Link}>
+            소개
+          </Link>
+        </Button>
+      </ListItem>
       <ListItem className={classes.listItem}>
         <Button
           color="transparent"

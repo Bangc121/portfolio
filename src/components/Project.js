@@ -28,31 +28,27 @@ const ImageContainer = styled.div`
 
 const Title = styled.span`
   display: block;
-  font-size: 14px;
-  margin-bottom: 3px;
-`;
-
-const Detail = styled.span`
-  display: block;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 200;
-
+  margin-bottom: 3px;
 `;
 
 const Skill = styled.span`
   display: block;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 200;
   margin-bottom: 3px;
 `;
 
-const Year = styled.span`
-  font-size: 10px;
-  color: rgba(255, 255, 255, 0.5);
+const Duration = styled.span`
+  display: block;
+  font-size: 16px;
+  font-weight: 200;
+  margin-bottom: 3px;
 `;
 
 const Project = ({ id, imageUrl, title, skill, duration }) => (
-  <Link to={`/project/${id}`}>
+  <Link to={`/${id}`}>
     <Container>
       <ImageContainer>
         <Image
@@ -61,6 +57,7 @@ const Project = ({ id, imageUrl, title, skill, duration }) => (
       </ImageContainer>
       <Title>{title}</Title>
       <Skill>{skill}</Skill>
+      <Duration>{duration}</Duration>
     </Container>
   </Link>
 );
@@ -68,7 +65,9 @@ const Project = ({ id, imageUrl, title, skill, duration }) => (
 Project.propTypes = {
   id: PropTypes.number.isRequired,
   imageUrl: PropTypes.string,
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  skill: PropTypes.string.isRequired,
+  duration: PropTypes.string.isRequired
 };
 
 export default Project;

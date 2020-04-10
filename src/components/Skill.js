@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Container = styled.div`
   font-size: 12px;
-  width: 80px;
+  width: 100%;
   margin: 0 auto;
 `;
 

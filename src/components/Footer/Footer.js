@@ -46,7 +46,7 @@ export default function Footer(props) {
                 className={classes.block}
                 target="_blank"
               >
-                Gihub
+                Github
               </a>
             </ListItem>
           </List>
