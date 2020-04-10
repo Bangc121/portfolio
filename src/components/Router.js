@@ -11,8 +11,8 @@ export default () => (
       <ScrollToTop>
         <Switch>
           <Route path="/" exact component={Home} />
-          {/* <Route path="/resume" component={Resume} />
-          <Route path="/Fillgi" component={Fillgi} /> */}
+          <Route path="/resume" component={Resume} />
+          <Route path="/Fillgi" component={Fillgi} />
           <Redirect from="*" to="/" />
         </Switch>
       </ScrollToTop>

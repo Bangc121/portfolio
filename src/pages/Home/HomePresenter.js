@@ -122,12 +122,10 @@ export default function HomePresenter() {
           </ButtonDiv>
           <Line />
         </div>
-      </div>
-      {/* <div className={classNames(classes.main)}>
         <SectionSkills />
         <SectionProjects />
         <SectionBlog />
-      </div> */}
+      </div>
       <Footer />
     </div>
   );
