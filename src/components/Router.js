@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Redirect, Switch } from "react-router-dom";
 import ScrollToTop from './ScrollToTop';
 import Home from "pages/Home";
 import Resume from "pages/Resume";
