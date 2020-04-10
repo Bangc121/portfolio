@@ -124,7 +124,7 @@ export default function HomePresenter() {
         </div>
         <SectionSkills />
         <SectionProjects />
-        {/* <SectionBlog /> */}
+        <SectionBlog />
       </div>
       <Footer />
     </div>

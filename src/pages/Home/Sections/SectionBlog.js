@@ -11,7 +11,6 @@ import "slick-carousel/slick/slick-theme.css";
 import './SectionCustomStyle.css'
 import Slider from "react-slick";
 import Button from '@material-ui/core/Button';
-import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(styles);
 
@@ -58,9 +57,7 @@ const ButtonDiv = styled.div`
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
-
     return (
-      // <button className={className} onClick={onClick}></button>
       <div
         className={className}
         onClick={onClick}
@@ -71,12 +68,6 @@ function SampleNextArrow(props) {
       >
         <style></style>
       </div>
-      // <div
-      //   className={className}
-      //   style={{ ...style, display: "block"}}
-      //   onClick={onClick}
-      // >
-      // </div>
     );
 }
 
