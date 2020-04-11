@@ -28,8 +28,9 @@ const ImageContainer = styled.div`
 
 const Title = styled.span`
   display: block;
-  font-size: 14px;
-  margin-bottom: 3px;
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 5px;
 `;
 
 const Skill = styled.span`

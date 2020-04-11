@@ -23,22 +23,22 @@ export default function HeaderLinks(props) {
     <List className={classes.list}>
       {" "}
       <ListItem className={classes.listItem}>
-        <Button
-          color="transparent"
-          className={classes.navLink + " " + classes.socialIconsButton}
-        >
-          <i
-            className={
-              classes.socialIcons +
-              " " +
-              classes.marginRight5 +
-              " fab fa-facebook"
-            }
-          />{" "}
-          <Link to="/resume" className={classes.Link}>
+        <Link to="/resume" className={classes.Link}>
+          <Button
+            color="transparent"
+            className={classes.navLink + " " + classes.socialIconsButton}
+          >
+            <i
+              className={
+                classes.socialIcons +
+                " " +
+                classes.marginRight5 +
+                " fab fa-facebook"
+              }
+            />{" "}
             소개
-          </Link>
-        </Button>
+          </Button>
+        </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button

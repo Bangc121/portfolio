@@ -19,8 +19,6 @@ import SectionSkills from "./Sections/SectionSkills.js";
 import SectionBlog from "./Sections/SectionBlog.js";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import image from "assets/IMG_8044.jpg";
-import Grid from '@material-ui/core/Grid';
 
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
 
@@ -44,8 +42,8 @@ const Role = styled.span`
   margin: 10px 0;
   display: block;
   font-size: 30px;
-  font-weight: 400;
   color: #555555;
+  font-weight: 400;
 `;
 
 const Description = styled.p`
@@ -58,6 +56,11 @@ const Description = styled.p`
 
 const ButtonDiv = styled.div`
   margin-bottom: 40px;
+`;
+
+const ButtonName = styled.div`
+  font-size: 16px;
+  font-weight: 300;
 `;
 
 const Line = styled.hr`
@@ -86,19 +89,19 @@ export default function HomePresenter() {
   return (
     <div>
       <Header
-        color="black"
+        color="transparent"
         brand="JH Portfolio"
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
-          // height: 400,
+          height: 100,
           color: "white"
         }}
       />
       <Container>
-        <Parallax image={require("assets/main.png")}>
+        <Parallax image={require("assets/img/main.png")}>
           <div className={classes.container}>
-            <GridContainer justify="flex-end">
+            <GridContainer>
               <GridItem xs={6}>
                 <div className={classes.brand}>
                   <Role>Mobile Full-Stack Developer</Role>
@@ -108,13 +111,11 @@ export default function HomePresenter() {
                     즐기는 개발자입니다 :){" "}
                   </Description>
                   <ButtonDiv>
-                    <div>
-                      <Link to="/resume">
-                        <Button variant="outlined" color="black">
-                          read more
-                        </Button>
-                      </Link>
-                    </div>
+                    <Link to="/resume">
+                      <Button variant="contained" color="secondary">
+                        <ButtonName>read more</ButtonName>
+                      </Button>
+                    </Link>
                   </ButtonDiv>
                 </div>
               </GridItem>

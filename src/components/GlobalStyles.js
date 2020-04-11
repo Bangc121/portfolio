@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components"
 import reset from "styled-reset";
 
 const GlobalStyles = createGlobalStyle`
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
     ${reset};
     a{
         text-decoration:none;
@@ -11,7 +12,7 @@ const GlobalStyles = createGlobalStyle`
         box-sizing:border-box;
     }
     body{
-        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family: 'Noto Sans KR' !important;
         font-size:12px;
         background-color:rgba(255, 255, 255, 1);
         color: black;

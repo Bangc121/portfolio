@@ -6,6 +6,9 @@ import styled from "styled-components";
 // core components
 import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
+import GridContainer from "components/Grid/GridContainer.js";
+import GridItem from "components/Grid/GridItem.js";
+import Skill from "components/Skill";
 // sections for this page
 import HeaderLinks from "components/Header/HeaderLinks.js";
 // @material-ui/core components
@@ -19,7 +22,7 @@ import styles from "assets/jss/material-kit-react/views/componentsSections/basic
 const useStyles = makeStyles(styles);
 
 const Block = styled.div`
-  height: 90px;
+  height: 100px;
   position: relative;
 `;
 
@@ -67,6 +70,7 @@ const SubTitle = styled.div`
   font-size: 24px;
   font-weight: 300;
   line-height: 180%;
+  padding-top: 30px;
   margin-bottom: 20px;
 `;
 
@@ -102,12 +106,16 @@ const Content = styled.div`
   background-color: grey;
 `;
 
+const GridDiv = styled.div`
+  margin-bottom: 50px;
+`;
+
 export default function FillgiPresenter() {
   const classes = useStyles();
   return (
     <div>
       <Header
-        brand="포트폴리오"
+        brand="JH Portfolio"
         rightLinks={<HeaderLinks />}
         fixed
         color="white"
@@ -164,10 +172,57 @@ export default function FillgiPresenter() {
           </OutLine>
           <SkillContainer>
             <SubTitle>기술스택</SubTitle>
-            <SikillMenu>Langauge</SikillMenu>
             <SikillMenu>Front-end</SikillMenu>
+            <GridDiv>
+              <GridContainer>
+                <GridItem xs={2}>
+                  <Skill title={"react-native"} image={"react"} />
+                </GridItem>
+                <GridItem xs={2}>
+                  <Skill title={"Javascript"} image={"js"} />
+                </GridItem>
+                <GridItem xs={2}>
+                  <Skill title={"Objective-C"} image={"objective-c"} />
+                </GridItem>
+              </GridContainer>
+            </GridDiv>
             <SikillMenu>Back-end</SikillMenu>
-            <SikillMenu>Server / Database</SikillMenu>
+            <GridDiv>
+              <GridContainer>
+                <GridItem xs={2}>
+                  <Skill title={"Node.js"} image={"node"} />
+                </GridItem>
+                <GridItem xs={2}>
+                  <Skill title={"Express.js"} image={"express"} />
+                </GridItem>
+                <GridItem xs={2}>
+                  <Skill title={"AWS"} image={"aws"} />
+                </GridItem>
+                <GridItem xs={2}>
+                  <Skill title={"Serverless"} image={"serverless"} />
+                </GridItem>
+                <GridItem xs={2}>
+                  <Skill title={"Mysql"} image={"mysql"} />
+                </GridItem>
+              </GridContainer>
+            </GridDiv>
+            <SikillMenu>Tools</SikillMenu>
+            <GridDiv>
+              <GridContainer>
+                <GridItem xs={2}>
+                  <Skill title={"Github"} image={"github"} />
+                </GridItem>
+                <GridItem xs={2}>
+                  <Skill title={"Slack"} image={"slack"} />
+                </GridItem>
+                <GridItem xs={2}>
+                  <Skill title={"Jira"} image={"jira"} />
+                </GridItem>
+                <GridItem xs={2}>
+                  <Skill title={"Avocode"} image={"avocode"} />
+                </GridItem>
+              </GridContainer>
+            </GridDiv>
           </SkillContainer>
           <FunctionContainer>
             <SubTitle>주요기능</SubTitle>

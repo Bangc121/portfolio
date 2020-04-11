@@ -29,22 +29,22 @@ const ImageContainer = styled.div`
 const Title = styled.span`
   display: block;
   font-size: 16px;
-  font-weight: 200;
-  margin-bottom: 3px;
+  font-weight: 300;
+  margin-bottom: 5px;
 `;
 
 const Skill = styled.span`
   display: block;
   font-size: 16px;
-  font-weight: 200;
-  margin-bottom: 3px;
+  font-weight: 300;
+  margin-bottom: 5px;
 `;
 
 const Duration = styled.span`
   display: block;
   font-size: 16px;
-  font-weight: 200;
-  margin-bottom: 3px;
+  font-weight: 300;
+  margin-bottom: 10px;
 `;
 
 const Project = ({ id, imageUrl, title, skill, duration }) => (

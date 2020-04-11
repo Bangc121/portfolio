@@ -14,7 +14,7 @@ import GridItem from "components/Grid/GridItem.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-
+import backImage from "assets/img/intro2.jpg";
 import styles from "assets/jss/material-kit-react/views/componentsSections/basicsStyle.js";
 
 const useStyles = makeStyles(styles);
@@ -24,50 +24,66 @@ const Block = styled.div`
   position: relative;
 `;
 
-const Title = styled.div`
-  font-size: 24px;
-  font-weight: 250;
-`;
-
-const Keyword = styled.div`
-  height: 300px;
-  margin: 20px 0;
-  background-color: grey;
-`;
 const Introduce = styled.div`
   position: relative;
   width: 100%;
 `;
 
 const IntroTitle = styled.h2`
-  font-size: 22px;
-  font-weight: 300;
-  line-height: 180%;
+  font-size: 30px;
+  font-weight: 400;
+  color: #555555;
+  line-height: 200%;
 `;
 
 const Text = styled.p`
   font-size: 16px;
-  font-weight: 250;
+  font-weight: 300;
+  color: #555555;
   line-height: 160%;
 `;
 
 const History = styled.div`
   width: 100%;
-  margin: 30px 0;
+  margin: 50px 0;
 `;
 
 const HistoryTitle = styled.h2`
-  font-size: 22px;
-  font-weight: 150;
-  line-height: 180%;
+  font-size: 30px;
+  font-weight: 400;
+  color: #555555;
+  line-height: 200%;
 `;
 
+const Backdrop = styled.div`
+  width: 100%;
+  height: 460px;
+  margin: 30px 0;
+  background-image: url(${props => props.bgImage});
+  background-position: center center;
+  background-size: cover;
+`;
+
+const Subtitle = styled.div`
+  font-size: 14px;
+  font-weight: 300;
+  color: #555555;
+  line-height: 160%;
+  margin-bottom: 5px;
+`;
+
+const SubDescription = styled.div`
+  font-size: 14px;
+  font-weight: 300;
+  color: #555555;
+  line-height: 140%;
+`;
 export default function ResumePresenter() {
   const classes = useStyles();
   return (
     <div>
       <Header
-        brand="포트폴리오"
+        brand="JH Portfolio"
         rightLinks={<HeaderLinks />}
         fixed
         color="white"
@@ -78,7 +94,8 @@ export default function ResumePresenter() {
       />
       <Block />
       <div className={classes.container}>
-        <Keyword></Keyword>
+        {/* <Keyword></Keyword> */}
+        <Backdrop bgImage={backImage} />
         <Introduce>
           <IntroTitle>개발자 소개</IntroTitle>
           <Text>
@@ -116,7 +133,9 @@ export default function ResumePresenter() {
             저의 개인적인 바램입니다.
           </Text>
           <br />
-          <Text>반갑습니다, 회사가 필요로하는 사람이 되고싶은 개발자 김정환입니다.</Text>
+          <Text>
+            반갑습니다, 회사가 필요로하는 사람이 되고싶은 개발자 김정환입니다.
+          </Text>
         </Introduce>
       </div>
 
@@ -131,142 +150,147 @@ export default function ResumePresenter() {
             <TimelineItem
               key="001"
               dateText="2020.09 – Present"
-              dateInnerStyle={{ background: "#000000" }}
+              dateInnerStyle={{
+                background: "#000000",
+                fontSize: 16,
+                fontFamily: '"Noto Sans KR"',
+                fontWeight: "400"
+              }}
               style={{ color: "#000000" }}
             >
-              <h2>
-                <Text>Flillgi, Company</Text>
-              </h2>
-              <h4>Subtitle</h4>
-              <p>
+              <Text>Flillgi Inc.</Text>
+              <Subtitle>멀티플랫폼 노트 어플리케이션</Subtitle>
+              <SubDescription>
                 Est incididunt sint eu minim dolore mollit velit velit commodo
                 ex nulla exercitation. Veniam velit adipisicing anim excepteur
                 nostrud magna nostrud aliqua dolor. Sunt aute est duis ut nulla
                 officia irure reprehenderit laborum fugiat dolore in elit.
                 Adipisicing do qui duis Lorem est.
-              </p>
+              </SubDescription>
             </TimelineItem>
             <TimelineItem
               key="002"
               dateText="2019.04 – 2019.07"
-              dateInnerStyle={{ background: "#ddd", color: "#000" }}
+              dateInnerStyle={{
+                background: "#ddd",
+                color: "#000",
+                fontSize: 16,
+                fontFamily: '"Noto Sans KR"',
+                fontWeight: "400"
+              }}
             >
-              <h2>
-                <Text>째깍악어, Company</Text>
-              </h2>
-              <h4 style={{ color: "#61b8ff" }}>Subtitle</h4>
-              <p>
+              <Text>(주)째깍악어</Text>
+              <Subtitle>아이돌봄 매칭서비스</Subtitle>
+              <SubDescription>
                 Est incididunt sint eu minim dolore mollit velit velit commodo
                 ex nulla exercitation. Veniam velit adipisicing anim excepteur
                 nostrud magna nostrud aliqua dolor. Sunt aute est duis ut nulla
                 officia irure reprehenderit laborum fugiat dolore in elit.
                 Adipisicing do qui duis Lorem est.
-              </p>
-              <p>
-                Est incididunt sint eu minim dolore mollit velit velit commodo
-                ex nulla exercitation. Veniam velit adipisicing anim excepteur
-                nostrud magna nostrud aliqua dolor. Sunt aute est duis ut nulla
-                officia irure reprehenderit laborum fugiat dolore in elit.
-                Adipisicing do qui duis Lorem est.
-              </p>
+              </SubDescription>
             </TimelineItem>
             <TimelineItem
               key="002"
-              dateText="2019.04 – 2019.07"
-              dateInnerStyle={{ background: "#ddd", color: "#000" }}
+              dateText="2018.10 – 2019.01"
+              dateInnerStyle={{
+                background: "#ddd",
+                color: "#000",
+                fontSize: 16,
+                fontFamily: '"Noto Sans KR"',
+                fontWeight: "400"
+              }}
             >
-              <h2>
-                <Text>Flillgi, Company</Text>
-              </h2>
-              <h4 style={{ color: "#61b8ff" }}>Subtitle</h4>
-              <p>
+              <Text>FixYou</Text>
+              <Subtitle>친구매칭 & 라이브방송 어플리케이션</Subtitle>
+              <SubDescription>
                 Est incididunt sint eu minim dolore mollit velit velit commodo
                 ex nulla exercitation. Veniam velit adipisicing anim excepteur
                 nostrud magna nostrud aliqua dolor. Sunt aute est duis ut nulla
                 officia irure reprehenderit laborum fugiat dolore in elit.
                 Adipisicing do qui duis Lorem est.
-              </p>
+              </SubDescription>
             </TimelineItem>
             <TimelineItem
               key="002"
-              dateText="2019.04 – 2019.07"
-              dateInnerStyle={{ background: "#ddd", color: "#000" }}
+              dateText="2018.03 – 2018.05"
+              dateInnerStyle={{
+                background: "#ddd",
+                color: "#000",
+                fontSize: 16,
+                fontFamily: '"Noto Sans KR"',
+                fontWeight: "400"
+              }}
             >
-              <h2>
-                <Text>Flillgi, Company</Text>
-              </h2>
-              <h4 style={{ color: "#61b8ff" }}>Subtitle</h4>
-              <p>
+              <Text>EasyRadio</Text>
+              <Subtitle>오디오 스트리밍 어플리케이션</Subtitle>
+              <SubDescription>
                 Est incididunt sint eu minim dolore mollit velit velit commodo
                 ex nulla exercitation. Veniam velit adipisicing anim excepteur
                 nostrud magna nostrud aliqua dolor. Sunt aute est duis ut nulla
                 officia irure reprehenderit laborum fugiat dolore in elit.
                 Adipisicing do qui duis Lorem est.
-              </p>
+              </SubDescription>
             </TimelineItem>
 
             <TimelineItem
               key="004"
-              dateText="08/2008 – 11/2008"
-              dateInnerStyle={{ background: "#ddd", color: "#000" }}
+              dateText="2018.01 – 2018.02"
+              dateInnerStyle={{
+                background: "#ddd",
+                color: "#000",
+                fontSize: 16,
+                fontFamily: '"Noto Sans KR"',
+                fontWeight: "400"
+              }}
             >
-              <h2>
-                <Text>Flillgi, Company</Text>
-              </h2>
-              <h4>Subtitle</h4>
-              <p>
+              <Text>프리마켓</Text>
+              <Subtitle>중고거래 웹사이트</Subtitle>
+              <SubDescription>
                 Est incididunt sint eu minim dolore mollit velit velit commodo
                 ex nulla exercitation. Veniam velit adipisicing anim excepteur
                 nostrud magna nostrud aliqua dolor. Sunt aute est duis ut nulla
                 officia irure reprehenderit laborum fugiat dolore in elit.
                 Adipisicing do qui duis Lorem est.
-              </p>
+              </SubDescription>
             </TimelineItem>
             <TimelineItem
               key="004"
-              dateText="08/2008 – 11/2008"
-              dateInnerStyle={{ background: "#ddd", color: "#000" }}
+              dateText="2017.03 – 2018.08"
+              dateInnerStyle={{
+                background: "#ddd",
+                color: "#000",
+                fontSize: 16,
+                fontFamily: '"Noto Sans KR"',
+                fontWeight: "400"
+              }}
             >
-              <h2>
-                <Text>Flillgi, Company</Text>
-              </h2>
-              <h4>Subtitle</h4>
-              <p>
+              <Text>AhnLab, Inc</Text>
+              <Subtitle>EMS개발팀 인턴</Subtitle>
+              <SubDescription>
                 Est incididunt sint eu minim dolore mollit velit velit commodo
                 ex nulla exercitation. Veniam velit adipisicing anim excepteur
                 nostrud magna nostrud aliqua dolor. Sunt aute est duis ut nulla
                 officia irure reprehenderit laborum fugiat dolore in elit.
                 Adipisicing do qui duis Lorem est.
-              </p>
+              </SubDescription>
             </TimelineItem>
             <TimelineItem
               key="004"
-              dateText="08/2008 – 11/2008"
-              dateInnerStyle={{ background: "#ddd", color: "#000" }}
+              dateText="2010.02"
+              dateInnerStyle={{
+                background: "#ddd",
+                color: "#000",
+                fontSize: 16,
+                fontFamily: '"Noto Sans KR"',
+                fontWeight: "400"
+              }}
             >
-              <h2>
-                <Text>Flillgi, Company</Text>
-              </h2>
-              <h4>Subtitle</h4>
-              <p>
-                Est incididunt sint eu minim dolore mollit velit velit commodo
-                ex nulla exercitation. Veniam velit adipisicing anim excepteur
-                nostrud magna nostrud aliqua dolor. Sunt aute est duis ut nulla
-                officia irure reprehenderit laborum fugiat dolore in elit.
-                Adipisicing do qui duis Lorem est.
-              </p>
+              <Text>명지대학교 정보통신공학과 입학</Text>
+              <Subtitle>Subtitle</Subtitle>
             </TimelineItem>
           </Timeline>
         </History>
       </div>
-
-      {/* <Container>
-        <div className={classes.section}>
-          <div className={classes.container}>
-            <Title>도전을 두려워하지 않는 개발자 김정환입니다.</Title>
-          </div>
-        </div>
-      </Container> */}
       <Footer />
     </div>
   );

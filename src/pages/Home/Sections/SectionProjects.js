@@ -24,14 +24,17 @@ const Container = styled.div`
 `;
 
 const Title = styled.div`
-  padding-top: 40px;
-  font-size: 28px;
+  padding-top: 60px;
+  font-size: 30px;
+  font-weight: 400;
+  color: #555555;
 `;
 
 const Description = styled.div`
   padding: 20px 0;
-  font-size: 18px;
-  font-weight: 250;
+  font-size: 16px;
+  font-weight: 400;
+  color: #555555;
 `;
 
 const SubTitle = styled.span`
@@ -97,7 +100,7 @@ export default function SectionProjects() {
             <GridItem xs={4}>
               <Project
                 title={"EasyRadio"}
-                id={"tictoc"}
+                id={"easyradio"}
                 skill={
                   "Android, Java, PHP, C++, Javascript, MariaDB"
                 }
@@ -107,7 +110,7 @@ export default function SectionProjects() {
             <GridItem xs={4}>
               <Project
                 title={"프리마켓"}
-                id={5}
+                id={"freemarket"}
                 skill={
                   "Javscript, PHP, HTML, CSS, Apache, Bootstrap, CentOS, MySql"
                 }

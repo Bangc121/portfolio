@@ -8,6 +8,9 @@ import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
 // sections for this page
 import HeaderLinks from "components/Header/HeaderLinks.js";
+import GridContainer from "components/Grid/GridContainer.js";
+import GridItem from "components/Grid/GridItem.js";
+import Skill from "components/Skill";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -19,7 +22,7 @@ import styles from "assets/jss/material-kit-react/views/componentsSections/basic
 const useStyles = makeStyles(styles);
 
 const Block = styled.div`
-  height: 90px;
+  height: 100px;
   position: relative;
 `;
 
@@ -102,12 +105,16 @@ const Content = styled.div`
   background-color: grey;
 `;
 
+const GridDiv = styled.div`
+  margin-bottom: 50px;
+`;
+
 export default function TictocPresenter() {
   const classes = useStyles();
   return (
     <div>
       <Header
-        brand="포트폴리오"
+        brand="JH Portfolio"
         rightLinks={<HeaderLinks />}
         fixed
         color="white"
@@ -151,7 +158,7 @@ export default function TictocPresenter() {
                 서비스를 제공하는 스타트업입니다.
               </p>
               <p>
-                현재 현재 10만명 정도의 유저를 가지고있으며 기존에 php로
+                개발당시 10만명 정도의 유저를 가지고있었으며 기존에 php로
                 유지되고있떤 웹앱을 클라이언트는 react-native로 서버는 python
                 django rest framework로 이전하는 작업에 투입되었습니다.
               </p>
@@ -159,10 +166,54 @@ export default function TictocPresenter() {
           </OutLine>
           <SkillContainer>
             <SubTitle>기술스택</SubTitle>
-            <SikillMenu>Langauge</SikillMenu>
             <SikillMenu>Front-end</SikillMenu>
+            <GridDiv>
+              <GridContainer>
+                <GridItem xs={2}>
+                  <Skill title={"react-native"} image={"react"} />
+                </GridItem>
+                <GridItem xs={2}>
+                  <Skill title={"Javascript"} image={"js"} />
+                </GridItem>
+                <GridItem xs={2}>
+                  <Skill title={"PHP"} image={"php"} />
+                </GridItem>
+              </GridContainer>
+            </GridDiv>
             <SikillMenu>Back-end</SikillMenu>
-            <SikillMenu>Server / Database</SikillMenu>
+            <GridDiv>
+              <GridContainer>
+                <GridItem xs={2}>
+                  <Skill title={"Python"} image={"python"} />
+                </GridItem>
+                <GridItem xs={2}>
+                  <Skill title={"Django"} image={"django"} />
+                </GridItem>
+                <GridItem xs={2}>
+                  <Skill title={"AWS"} image={"aws"} />
+                </GridItem>
+                <GridItem xs={2}>
+                  <Skill title={"Serverless"} image={"serverless"} />
+                </GridItem>
+                <GridItem xs={2}>
+                  <Skill title={"Mysql"} image={"mysql"} />
+                </GridItem>
+              </GridContainer>
+            </GridDiv>
+            <SikillMenu>Tools</SikillMenu>
+            <GridDiv>
+              <GridContainer>
+                <GridItem xs={2}>
+                  <Skill title={"Github"} image={"github"} />
+                </GridItem>
+                <GridItem xs={2}>
+                  <Skill title={"Slack"} image={"slack"} />
+                </GridItem>
+                <GridItem xs={2}>
+                  <Skill title={"Zeplin"} image={"zeplin"} />
+                </GridItem>
+              </GridContainer>
+            </GridDiv>
           </SkillContainer>
           <FunctionContainer>
             <SubTitle>주요기능</SubTitle>

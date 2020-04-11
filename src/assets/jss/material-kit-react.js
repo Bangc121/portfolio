@@ -43,7 +43,7 @@ const container = {
     maxWidth: "960px"
   },
   "@media (min-width: 1200px)": {
-    maxWidth: "1140px"
+    maxWidth: "1280px"
   }
 };
 
@@ -64,7 +64,7 @@ const card = {
 };
 
 const defaultFont = {
-  fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+  fontFamily: '"Noto Sans KR", "Helvetica", "Arial", sans-serif',
   fontWeight: "300",
   lineHeight: "1.5em"
 };

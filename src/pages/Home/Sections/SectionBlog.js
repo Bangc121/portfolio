@@ -37,20 +37,23 @@ const SlideContainer = styled.div`
 `;
 
 const Title = styled.div`
-  padding-top: 40px;
-  font-size: 28px;
+  padding-top: 60px;
+  font-size: 30px;
+  font-weight: 400;
+  color: #555555;
 `;
 
 const Description = styled.div`
   padding: 20px 0;
-  font-size: 18px;
-  font-weight: 250;
+  font-size: 16px;
+  font-weight: 400;
+  color: #555555;
 `;
 
 const ButtonDiv = styled.div`
   text-align: center;
   margin-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 `;
 
 
