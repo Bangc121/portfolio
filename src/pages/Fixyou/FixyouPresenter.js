@@ -9,6 +9,7 @@ import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Skill from "components/Skill";
+import Function from "components/Function";
 // sections for this page
 import HeaderLinks from "components/Header/HeaderLinks.js";
 // @material-ui/core components
@@ -58,7 +59,7 @@ const SubTitle = styled.div`
 
 const SubDetail = styled.div`
   font-size: 16px;
-  font-weight: 250;
+  font-weight: 300;
   line-height: 180%;
 `;
 
@@ -84,8 +85,7 @@ const FunctionContainer = styled.div`
 const Content = styled.div`
   margin: 30px 0;
   width: 100%;
-  height: 700px;
-  background-color: grey;
+  height: auto;
 `;
 
 const GridDiv = styled.div`
@@ -110,7 +110,7 @@ export default function FixyouPresenter() {
       <div className={classes.container}>
         <Container>
           <Title>
-            <h3>Fix You</h3>
+            <h3>Fix You 친구매칭 & 영상스트리밍 어플리케이션</h3>
           </Title>
           <Duration>
             <h4>2018.10 ~ 2019.01</h4>
@@ -204,14 +204,75 @@ export default function FixyouPresenter() {
           </SkillContainer>
           <FunctionContainer>
             <SubTitle>주요기능</SubTitle>
-            <SubDetail>
+            {/* <SubDetail>
               <p>
                 FILLGI Inc.는 미국 LA와 산호세에 위치한 법인으로 글로벌 시장에서
                 태블릿과 모바일 디바이스를 넘어 다양한 플랫폼에서 활용가능한
                 노트 어플리케이션을 개발하고 있습니다.
               </p>
-            </SubDetail>
-            <Content></Content>
+            </SubDetail> */}
+            <Content>
+              <GridDiv>
+                <GridContainer>
+                  <GridItem xs={4}>
+                    <Function title={"SNS 로그인"} image={"fixyou_1"} />
+                  </GridItem>
+                  <GridItem xs={4}>
+                    <Function
+                      title={"WebRTC 스트리밍 & 채팅"}
+                      image={"fixyou_2"}
+                    />
+                  </GridItem>
+                  <GridItem xs={4}>
+                    <Function
+                      title={"다시보기 녹화 & 재생"}
+                      image={"fixyou_3"}
+                    />
+                  </GridItem>
+                </GridContainer>
+              </GridDiv>
+              <GridDiv>
+                <GridContainer>
+                  <GridItem xs={4}>
+                    <Function
+                      title={"관심사유사도에 따른 친구추천"}
+                      image={"fixyou_4"}
+                    />
+                  </GridItem>
+                  <GridItem xs={4}>
+                    <Function
+                      title={"500미터 이내 친구표시"}
+                      image={"fixyou_5"}
+                    />
+                  </GridItem>
+                  <GridItem xs={4}>
+                    <Function
+                      title={"1:1 채팅 & 영어번역"}
+                      image={"fixyou_6"}
+                    />
+                  </GridItem>
+                </GridContainer>
+              </GridDiv>
+              <GridDiv>
+                <GridContainer>
+                  <GridItem xs={4}>
+                    <Function
+                      title={"이더리움 지갑생성 & 토큰전송"}
+                      image={"fixyou_7"}
+                    />
+                  </GridItem>
+                  <GridItem xs={4}>
+                    <Function title={"카카오페이 결제"} image={"fixyou_8"} />
+                  </GridItem>
+                  <GridItem xs={4}>
+                    <Function
+                      title={"얼굴인식 카메라 & 마스크"}
+                      image={"fixyou_9"}
+                    />
+                  </GridItem>
+                </GridContainer>
+              </GridDiv>
+            </Content>
           </FunctionContainer>
         </Container>
       </div>

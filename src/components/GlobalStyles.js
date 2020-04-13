@@ -26,6 +26,18 @@ const GlobalStyles = createGlobalStyle`
         color: black;
         font-size: 25px;
     }
+
+    .vertical-timeline::before {
+        background-color: #ddd;
+    }
+
+    .vertical-timeline-element-icon {
+        box-shadow: 0 0 0 4px #ddd, inset 0 2px 0 rgba(0,0,0,.08), 0 3px 0 4px rgba(0,0,0,.05);
+    }
+
+    .vertical-timeline-element-content {
+        box-shadow: 1px 2px 3px #ddd;
+    }
 `;
 
 export default GlobalStyles;

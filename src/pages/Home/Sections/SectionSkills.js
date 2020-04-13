@@ -71,7 +71,7 @@ export default function SectionSkills() {
                 <Skill title={"Android"} image={"android"} />
               </GridItem>
               <GridItem xs={2}>
-                <Skill title={"React"} image={"react"} />
+                <Skill title={"React-Native"} image={"react"} />
               </GridItem>
               <GridItem xs={2}>
                 <Skill title={"Linux"} image={"linux"} />

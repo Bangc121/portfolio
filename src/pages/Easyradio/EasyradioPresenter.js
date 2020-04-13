@@ -6,6 +6,10 @@ import styled from "styled-components";
 // core components
 import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
+import GridContainer from "components/Grid/GridContainer.js";
+import GridItem from "components/Grid/GridItem.js";
+import Skill from "components/Skill";
+import Function from "components/Function";
 // sections for this page
 import HeaderLinks from "components/Header/HeaderLinks.js";
 // @material-ui/core components
@@ -55,7 +59,7 @@ const SubTitle = styled.div`
 
 const SubDetail = styled.div`
   font-size: 16px;
-  font-weight: 250;
+  font-weight: 300;
   line-height: 180%;
 `;
 
@@ -81,8 +85,11 @@ const FunctionContainer = styled.div`
 const Content = styled.div`
   margin: 30px 0;
   width: 100%;
-  height: 700px;
-  background-color: grey;
+  height: auto;
+`;
+
+const GridDiv = styled.div`
+  margin-bottom: 50px;
 `;
 
 export default function EasyradioPresenter() {
@@ -103,7 +110,7 @@ export default function EasyradioPresenter() {
       <div className={classes.container}>
         <Container>
           <Title>
-            <h3>Fillgi 멀티플랫폼 노트 어플리케이션</h3>
+            <h3>EasyRadio 오디오스트리밍 어플리케이션</h3>
           </Title>
           <Duration>
             <h4>2019.09 ~ 2020.04</h4>
@@ -130,10 +137,48 @@ export default function EasyradioPresenter() {
           </OutLine>
           <SkillContainer>
             <SubTitle>기술스택</SubTitle>
-            <SikillMenu>Langauge</SikillMenu>
             <SikillMenu>Front-end</SikillMenu>
+            <GridDiv>
+              <GridContainer>
+                <GridItem xs={2}>
+                  <Skill title={"Android"} image={"android"} />
+                </GridItem>
+                <GridItem xs={2}>
+                  <Skill title={"Java"} image={"java"} />
+                </GridItem>
+                <GridItem xs={2}>
+                  <Skill title={"C++"} image={"c++"} />
+                </GridItem>
+              </GridContainer>
+            </GridDiv>
             <SikillMenu>Back-end</SikillMenu>
-            <SikillMenu>Server / Database</SikillMenu>
+            <GridDiv>
+              <GridContainer>
+                <GridItem xs={2}>
+                  <Skill title={"AWS"} image={"aws"} />
+                </GridItem>
+                <GridItem xs={2}>
+                  <Skill title={"Centos"} image={"centos"} />
+                </GridItem>
+                <GridItem xs={2}>
+                  <Skill title={"Nginx"} image={"nginx"} />
+                </GridItem>
+                <GridItem xs={2}>
+                  <Skill title={"PHP"} image={"php"} />
+                </GridItem>
+                <GridItem xs={2}>
+                  <Skill title={"Javascript"} image={"js"} />
+                </GridItem>
+              </GridContainer>
+            </GridDiv>
+            <SikillMenu>Database / Protocol</SikillMenu>
+            <GridDiv>
+              <GridContainer>
+                <GridItem xs={2}>
+                  <Skill title={"MariaDB"} image={"mariadb"} />
+                </GridItem>
+              </GridContainer>
+            </GridDiv>
           </SkillContainer>
           <FunctionContainer>
             <SubTitle>주요기능</SubTitle>
@@ -144,7 +189,43 @@ export default function EasyradioPresenter() {
                 노트 어플리케이션을 개발하고 있습니다.
               </p>
             </SubDetail>
-            <Content></Content>
+            <Content>
+              <GridDiv>
+                <GridContainer>
+                  <GridItem xs={4}>
+                    <Function title={"페이스북 로그인"} image={"easy_1"} />
+                  </GridItem>
+                  <GridItem xs={4}>
+                    <Function
+                      title={"페이스북친구 연동 & 추가"}
+                      image={"easy_2"}
+                    />
+                  </GridItem>
+                  <GridItem xs={4}>
+                    <Function
+                      title={"얼굴인식 카메라"}
+                      image={"easy_3"}
+                    />
+                  </GridItem>
+                </GridContainer>
+              </GridDiv>
+              <GridDiv>
+                <GridContainer>
+                  <GridItem xs={4}>
+                    <Function
+                      title={"오디오스트리밍 방송 & 소켓채팅"}
+                      image={"easy_4"}
+                    />
+                  </GridItem>
+                  <GridItem xs={4}>
+                    <Function
+                      title={"오디오 & 채팅내역 다시보기"}
+                      image={"easy_5"}
+                    />
+                  </GridItem>
+                </GridContainer>
+              </GridDiv>
+            </Content>
           </FunctionContainer>
         </Container>
       </div>

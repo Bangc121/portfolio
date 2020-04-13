@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   font-size: 12px;
@@ -8,47 +9,43 @@ const Container = styled.div`
 
 const Image = styled.div`
   background-image: url(${props => props.bgUrl});
-  height: 250px;
+  height: 230px;
+  width: 500px;
   background-size: cover;
   border-radius: 2px;
   background-position: center center;
   transition: opacity 0.1s linear;
+  margin: 0 auto;
 `;
 
 const ImageContainer = styled.div`
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   position: relative;
-  &:hover {
-    ${Image} {
-      opacity: 0.3;
-    }
-  }
 `;
 
 const Title = styled.span`
   display: block;
   font-size: 16px;
-  font-weight: 300;
-  margin-bottom: 5px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  text-align: center;
 `;
 
-const Blog = ({ id, imageUrl, title, skill }) => (
-  <a href={`https://bangc.tistory.com/${id}`}>
-    <Container>
-      <ImageContainer>
-        <Image
-          bgUrl={imageUrl ? `${imageUrl}` : require(`../assets/${id}.png`)}
-        />
-      </ImageContainer>
-      <Title>{title}</Title>
-    </Container>
-  </a>
+const Market = ({ id, image, title }) => (
+  <Container>
+    <ImageContainer>
+      <Image bgUrl={require(`../assets/${image}.png`)} />
+    </ImageContainer>
+    <Title>{title}</Title>
+  </Container>
 );
 
-Blog.propTypes = {
+Market.propTypes = {
   id: PropTypes.number.isRequired,
   imageUrl: PropTypes.string,
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  skill: PropTypes.string.isRequired,
+  duration: PropTypes.string.isRequired
 };
 
-export default Blog;
+export default Market;

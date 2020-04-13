@@ -30,14 +30,14 @@ const Title = styled.span`
   display: block;
   font-size: 16px;
   font-weight: 300;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 `;
 
 const Skill = styled.span`
   display: block;
   font-size: 16px;
   font-weight: 300;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 `;
 
 const Duration = styled.span`

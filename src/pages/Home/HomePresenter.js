@@ -106,9 +106,9 @@ export default function HomePresenter() {
                 <div className={classes.brand}>
                   <Role>Mobile Full-Stack Developer</Role>
                   <Description>
-                    현재 react-native와 nodejs를 사용하여 풀스택개발을
+                    Android앱개발을 시작으로 현재 react-native와 nodejs를 사용하여 풀스택개발을
                     하고있습니다. 현실에 안주하지않고 새로운 도전과 배움을
-                    즐기는 개발자입니다 :){" "}
+                    즐기는 개발자입니다 :)
                   </Description>
                   <ButtonDiv>
                     <Link to="/resume">

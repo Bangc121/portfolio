@@ -6,6 +6,10 @@ import styled from "styled-components";
 // core components
 import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
+import GridContainer from "components/Grid/GridContainer.js";
+import GridItem from "components/Grid/GridItem.js";
+import Skill from "components/Skill";
+import Function from "components/Market";
 // sections for this page
 import HeaderLinks from "components/Header/HeaderLinks.js";
 // @material-ui/core components
@@ -55,7 +59,7 @@ const SubTitle = styled.div`
 
 const SubDetail = styled.div`
   font-size: 16px;
-  font-weight: 250;
+  font-weight: 300;
   line-height: 180%;
 `;
 
@@ -81,8 +85,11 @@ const FunctionContainer = styled.div`
 const Content = styled.div`
   margin: 30px 0;
   width: 100%;
-  height: 700px;
-  background-color: grey;
+  height: auto;
+`;
+
+const GridDiv = styled.div`
+  margin-bottom: 50px;
 `;
 
 export default function FreemarketPresenter() {
@@ -136,19 +143,102 @@ export default function FreemarketPresenter() {
           <SkillContainer>
             <SubTitle>기술스택</SubTitle>
             <SikillMenu>Front-end</SikillMenu>
+            <GridDiv>
+              <GridContainer>
+                <GridItem xs={2}>
+                  <Skill title={"PHP"} image={"php"} />
+                </GridItem>
+                <GridItem xs={2}>
+                  <Skill title={"HTML"} image={"html"} />
+                </GridItem>
+                <GridItem xs={2}>
+                  <Skill title={"CSS"} image={"css"} />
+                </GridItem>
+                <GridItem xs={2}>
+                  <Skill title={"Javascript"} image={"js"} />
+                </GridItem>
+                <GridItem xs={2}>
+                  <Skill title={"Bootstrap"} image={"bootstrap"} />
+                </GridItem>
+              </GridContainer>
+            </GridDiv>
             <SikillMenu>Back-end</SikillMenu>
-            <SikillMenu>Server / Database</SikillMenu>
+            <GridDiv>
+              <GridContainer>
+                <GridItem xs={2}>
+                  <Skill title={"AWS"} image={"aws"} />
+                </GridItem>
+                <GridItem xs={2}>
+                  <Skill title={"Centos"} image={"centos"} />
+                </GridItem>
+                <GridItem xs={2}>
+                  <Skill title={"Apache"} image={"apache"} />
+                </GridItem>
+              </GridContainer>
+            </GridDiv>
+            <SikillMenu>Database / Protocol</SikillMenu>
+            <GridDiv>
+              <GridContainer>
+                <GridItem xs={2}>
+                  <Skill title={"Mysql"} image={"mysql"} />
+                </GridItem>
+              </GridContainer>
+            </GridDiv>
           </SkillContainer>
           <FunctionContainer>
             <SubTitle>주요기능</SubTitle>
             <SubDetail>
               <p>
-                FILLGI Inc.는 미국 LA와 산호세에 위치한 법인으로 글로벌 시장에서
-                태블릿과 모바일 디바이스를 넘어 다양한 플랫폼에서 활용가능한
-                노트 어플리케이션을 개발하고 있습니다.
+
               </p>
             </SubDetail>
-            <Content></Content>
+            <Content>
+              <GridDiv>
+                <GridContainer>
+                  <GridItem xs={6}>
+                    <Function title={"메인 페이지"} image={"market_1"} />
+                  </GridItem>
+                  <GridItem xs={6}>
+                    <Function
+                      title={"게시판"}
+                      image={"market_2"}
+                    />
+                  </GridItem>
+                </GridContainer>
+              </GridDiv>
+              <GridDiv>
+                <GridContainer>
+                  <GridItem xs={6}>
+                    <Function
+                      title={"게시판 댓글"}
+                      image={"market_3"}
+                    />
+                  </GridItem>
+                  <GridItem xs={6}>
+                    <Function
+                      title={"상품게시판"}
+                      image={"market_4"}
+                    />
+                  </GridItem>
+                </GridContainer>
+              </GridDiv>
+              <GridDiv>
+                <GridContainer>
+                  <GridItem xs={6}>
+                    <Function
+                      title={"주소검색"}
+                      image={"market_5"}
+                    />
+                  </GridItem>
+                  <GridItem xs={6}>
+                    <Function
+                      title={"상품결제 시스템"}
+                      image={"market_6"}
+                    />
+                  </GridItem>
+                </GridContainer>
+              </GridDiv>
+            </Content>
           </FunctionContainer>
         </Container>
       </div>

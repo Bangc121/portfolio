@@ -16,6 +16,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import image from "assets/homepage.png";
 import backImage from "assets/fillgi_main.png";
+import funcImage from "assets/fillgi_function.png";
 
 import styles from "assets/jss/material-kit-react/views/componentsSections/basicsStyle.js";
 
@@ -76,14 +77,14 @@ const SubTitle = styled.div`
 
 const SubDetail = styled.div`
   font-size: 16px;
-  font-weight: 250;
+  font-weight: 300;
   line-height: 180%;
 `;
 
 const SkillContainer = styled.div`
   width: 100%;
   height: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 100px;
 `;
 
 const SikillMenu = styled.div`
@@ -91,19 +92,6 @@ const SikillMenu = styled.div`
   font-weight: 250;
   line-height: 180%;
   margin-bottom: 20px;
-`;
-
-const FunctionContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  margin-bottom: 30px;
-`;
-
-const Content = styled.div`
-  margin: 30px 0;
-  width: 100%;
-  height: 700px;
-  background-color: grey;
 `;
 
 const GridDiv = styled.div`
@@ -131,7 +119,7 @@ export default function FillgiPresenter() {
             <h3>Fillgi 멀티플랫폼 노트 어플리케이션</h3>
           </Title>
           <Duration>
-            <h4>2019.09 ~ 2020.04</h4>
+            <h4>2019.09 ~ 2019.04</h4>
           </Duration>
           <image src={image}></image>
           <HomePage>
@@ -224,17 +212,6 @@ export default function FillgiPresenter() {
               </GridContainer>
             </GridDiv>
           </SkillContainer>
-          <FunctionContainer>
-            <SubTitle>주요기능</SubTitle>
-            <SubDetail>
-              <p>
-                FILLGI Inc.는 미국 LA와 산호세에 위치한 법인으로 글로벌 시장에서
-                태블릿과 모바일 디바이스를 넘어 다양한 플랫폼에서 활용가능한
-                노트 어플리케이션을 개발하고 있습니다.
-              </p>
-            </SubDetail>
-            <Content></Content>
-          </FunctionContainer>
         </Container>
       </div>
       <Footer />

@@ -1,9 +1,12 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react';
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+// import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react';
 // core components
 import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
@@ -12,9 +15,18 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 // sections for this page
 import HeaderLinks from "components/Header/HeaderLinks.js";
+// @material-ui/icons
+import Menu from "@material-ui/icons/Menu";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import backImage from "assets/img/intro2.jpg";
+import fillgi_icon from "assets/img/icon/fillgi_icon.png";
+import tictoc_icon from "assets/img/icon/tictoc_icon.png";
+import fixyou_icon from "assets/img/icon/fixyou_icon.png";
+import radio_icon from "assets/img/icon/radio_icon.png";
+import free_icon from "assets/img/icon/free_icon.png";
+import ahnlab_icon from "assets/img/icon/ahnlab_icon.png";
+import myongji_icon from "assets/img/icon/myongji_icon.png";
 import styles from "assets/jss/material-kit-react/views/componentsSections/basicsStyle.js";
 
 const useStyles = makeStyles(styles);
@@ -31,7 +43,7 @@ const Introduce = styled.div`
 
 const IntroTitle = styled.h2`
   font-size: 30px;
-  font-weight: 400;
+  font-weight: 300;
   color: #555555;
   line-height: 200%;
 `;
@@ -43,8 +55,16 @@ const Text = styled.p`
   line-height: 160%;
 `;
 
+const HistotyText = styled.div`
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 5px;
+  color: #000;
+`;
+
 const History = styled.div`
   width: 100%;
+  height: auto;
   margin: 50px 0;
 `;
 
@@ -66,9 +86,9 @@ const Backdrop = styled.div`
 
 const Subtitle = styled.div`
   font-size: 14px;
-  font-weight: 300;
-  color: #555555;
+  font-weight: 400;
   line-height: 160%;
+  color: #000;
   margin-bottom: 5px;
 `;
 
@@ -142,153 +162,152 @@ export default function ResumePresenter() {
       <div className={classes.container}>
         <History>
           <HistoryTitle>히스토리</HistoryTitle>
-          <Timeline
-            lineColor={"#ddd"}
+          <VerticalTimeline
+            className={String}
             animate={false}
-            className={classes.container}
+            layout={"2-columns"}
           >
-            <TimelineItem
-              key="001"
-              dateText="2020.09 – Present"
-              dateInnerStyle={{
-                background: "#000000",
-                fontSize: 16,
-                fontFamily: '"Noto Sans KR"',
-                fontWeight: "400"
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              date="2019.09 - present"
+              iconStyle={{
+                background: "#fff",
+                color: "#fff",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
               }}
-              style={{ color: "#000000" }}
+              icon={
+                <img
+                  src={fillgi_icon}
+                  style={{ width: "100%", height: "100%", borderRadius: "50%" }}
+                />
+              }
             >
-              <Text>Flillgi Inc.</Text>
+              <HistotyText>Flillgi Inc.</HistotyText>
               <Subtitle>멀티플랫폼 노트 어플리케이션</Subtitle>
-              <SubDescription>
-                Est incididunt sint eu minim dolore mollit velit velit commodo
-                ex nulla exercitation. Veniam velit adipisicing anim excepteur
-                nostrud magna nostrud aliqua dolor. Sunt aute est duis ut nulla
-                officia irure reprehenderit laborum fugiat dolore in elit.
-                Adipisicing do qui duis Lorem est.
-              </SubDescription>
-            </TimelineItem>
-            <TimelineItem
-              key="002"
-              dateText="2019.04 – 2019.07"
-              dateInnerStyle={{
-                background: "#ddd",
-                color: "#000",
-                fontSize: 16,
-                fontFamily: '"Noto Sans KR"',
-                fontWeight: "400"
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              date="2019.04 - 2019.07"
+              iconStyle={{
+                background: "#fff",
+                color: "#fff",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
               }}
+              icon={
+                <img
+                  src={tictoc_icon}
+                  style={{ width: "100%", height: "100%", borderRadius: "50%" }}
+                />
+              }
             >
-              <Text>(주)째깍악어</Text>
-              <Subtitle>아이돌봄 매칭서비스</Subtitle>
-              <SubDescription>
-                Est incididunt sint eu minim dolore mollit velit velit commodo
-                ex nulla exercitation. Veniam velit adipisicing anim excepteur
-                nostrud magna nostrud aliqua dolor. Sunt aute est duis ut nulla
-                officia irure reprehenderit laborum fugiat dolore in elit.
-                Adipisicing do qui duis Lorem est.
-              </SubDescription>
-            </TimelineItem>
-            <TimelineItem
-              key="002"
-              dateText="2018.10 – 2019.01"
-              dateInnerStyle={{
-                background: "#ddd",
-                color: "#000",
-                fontSize: 16,
-                fontFamily: '"Noto Sans KR"',
-                fontWeight: "400"
+              <HistotyText>(주)째깍악어</HistotyText>
+              <Subtitle>아이돌봄 매칭 어플리케이션</Subtitle>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              date="2018.10 - 2019.01"
+              iconStyle={{
+                background: "#fff",
+                color: "#fff",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
               }}
+              icon={
+                <img
+                  src={fixyou_icon}
+                  style={{ width: "100%", height: "100%", borderRadius: "50%" }}
+                />
+              }
             >
-              <Text>FixYou</Text>
-              <Subtitle>친구매칭 & 라이브방송 어플리케이션</Subtitle>
-              <SubDescription>
-                Est incididunt sint eu minim dolore mollit velit velit commodo
-                ex nulla exercitation. Veniam velit adipisicing anim excepteur
-                nostrud magna nostrud aliqua dolor. Sunt aute est duis ut nulla
-                officia irure reprehenderit laborum fugiat dolore in elit.
-                Adipisicing do qui duis Lorem est.
-              </SubDescription>
-            </TimelineItem>
-            <TimelineItem
-              key="002"
-              dateText="2018.03 – 2018.05"
-              dateInnerStyle={{
-                background: "#ddd",
-                color: "#000",
-                fontSize: 16,
-                fontFamily: '"Noto Sans KR"',
-                fontWeight: "400"
+              <HistotyText>FixYou</HistotyText>
+              <Subtitle>친구매칭 & 라이브스트리밍 어플리케이션</Subtitle>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              date="2018.03 - 2018.05"
+              iconStyle={{
+                background: "#fff",
+                color: "#fff",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
               }}
+              icon={
+                <img
+                  src={radio_icon}
+                  style={{ width: "100%", height: "100%", borderRadius: "50%" }}
+                />
+              }
             >
-              <Text>EasyRadio</Text>
-              <Subtitle>오디오 스트리밍 어플리케이션</Subtitle>
-              <SubDescription>
-                Est incididunt sint eu minim dolore mollit velit velit commodo
-                ex nulla exercitation. Veniam velit adipisicing anim excepteur
-                nostrud magna nostrud aliqua dolor. Sunt aute est duis ut nulla
-                officia irure reprehenderit laborum fugiat dolore in elit.
-                Adipisicing do qui duis Lorem est.
-              </SubDescription>
-            </TimelineItem>
-
-            <TimelineItem
-              key="004"
-              dateText="2018.01 – 2018.02"
-              dateInnerStyle={{
-                background: "#ddd",
-                color: "#000",
-                fontSize: 16,
-                fontFamily: '"Noto Sans KR"',
-                fontWeight: "400"
+              <HistotyText>EasyRadio</HistotyText>
+              <Subtitle>오디오스트리밍 어플리케이션</Subtitle>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--education"
+              date="2018.01 - 2018.02"
+              iconStyle={{
+                background: "#fff",
+                color: "#fff",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
               }}
+              icon={
+                <img
+                  src={free_icon}
+                  style={{ width: "100%", height: "100%", borderRadius: "50%" }}
+                />
+              }
             >
-              <Text>프리마켓</Text>
-              <Subtitle>중고거래 웹사이트</Subtitle>
-              <SubDescription>
-                Est incididunt sint eu minim dolore mollit velit velit commodo
-                ex nulla exercitation. Veniam velit adipisicing anim excepteur
-                nostrud magna nostrud aliqua dolor. Sunt aute est duis ut nulla
-                officia irure reprehenderit laborum fugiat dolore in elit.
-                Adipisicing do qui duis Lorem est.
-              </SubDescription>
-            </TimelineItem>
-            <TimelineItem
-              key="004"
-              dateText="2017.03 – 2018.08"
-              dateInnerStyle={{
-                background: "#ddd",
-                color: "#000",
-                fontSize: 16,
-                fontFamily: '"Noto Sans KR"',
-                fontWeight: "400"
+              <HistotyText>프리마켓</HistotyText>
+              <Subtitle>중고거래사이트</Subtitle>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--education"
+              date="2017.03 - 2017.08"
+              iconStyle={{
+                background: "#fff",
+                color: "#fff",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
               }}
+              icon={
+                <img
+                  src={ahnlab_icon}
+                  style={{ width: "100%", height: "100%", borderRadius: "50%" }}
+                />
+              }
             >
-              <Text>AhnLab, Inc</Text>
+              <HistotyText>Ahnlab Inc.</HistotyText>
               <Subtitle>EMS개발팀 인턴</Subtitle>
-              <SubDescription>
-                Est incididunt sint eu minim dolore mollit velit velit commodo
-                ex nulla exercitation. Veniam velit adipisicing anim excepteur
-                nostrud magna nostrud aliqua dolor. Sunt aute est duis ut nulla
-                officia irure reprehenderit laborum fugiat dolore in elit.
-                Adipisicing do qui duis Lorem est.
-              </SubDescription>
-            </TimelineItem>
-            <TimelineItem
-              key="004"
-              dateText="2010.02"
-              dateInnerStyle={{
-                background: "#ddd",
-                color: "#000",
-                fontSize: 16,
-                fontFamily: '"Noto Sans KR"',
-                fontWeight: "400"
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--education"
+              date="2010.02 - 2018.02"
+              iconStyle={{
+                background: "#fff",
+                color: "#fff",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
               }}
+              icon={
+                <img
+                  src={myongji_icon}
+                  style={{ width: "100%", height: "100%", borderRadius: "50%" }}
+                />
+              }
             >
-              <Text>명지대학교 정보통신공학과 입학</Text>
-              <Subtitle>Subtitle</Subtitle>
-            </TimelineItem>
-          </Timeline>
+              <HistotyText>명지대학교 정보통신공학과</HistotyText>
+              <Subtitle>프로그래밍 입문</Subtitle>
+            </VerticalTimelineElement>
+          </VerticalTimeline>
         </History>
       </div>
       <Footer />
