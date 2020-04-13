@@ -124,19 +124,11 @@ export default function FreemarketPresenter() {
           <OutLine>
             <SubTitle>프로젝트 개요</SubTitle>
             <SubDetail>
+              <p>네이버 중고나라를 모티브로 만든 웹사이트입니다.</p>
               <p>
-                FILLGI Inc.는 미국 LA와 산호세에 위치한 법인으로 글로벌 시장에서
-                태블릿과 모바일 디바이스를 넘어 다양한 플랫폼에서 활용가능한
-                노트 어플리케이션을 개발하고 있습니다.
-              </p>
-              <p>
-                사용자의 단순한 노트 작성을 넘어 공유(share),
-                협업(collaboration), 판매(Market)에 이르는 확장성을 가진 노트
-                제작 플랫폼을 추구하며 런칭하였습니다.
-              </p>
-              <p>
-                북미시장을 시작으로 글로벌 시장으로 도전하고자 하며, 현재
-                모든개발 및 업데이트는 한국에서 진행중입니다.
+                판매자는 자신이 팔고싶은 물건을 자유롭게 가격을 책정해 게시판에
+                올릴수있고. 구매자는 적당한가격에 오퍼를넣어 결제시스템을
+                이용하여 구매할수있게 개발하였습니다.
               </p>
             </SubDetail>
           </OutLine>
@@ -188,9 +180,7 @@ export default function FreemarketPresenter() {
           <FunctionContainer>
             <SubTitle>주요기능</SubTitle>
             <SubDetail>
-              <p>
-
-              </p>
+              <p></p>
             </SubDetail>
             <Content>
               <GridDiv>
@@ -199,42 +189,27 @@ export default function FreemarketPresenter() {
                     <Function title={"메인 페이지"} image={"market_1"} />
                   </GridItem>
                   <GridItem xs={6}>
-                    <Function
-                      title={"게시판"}
-                      image={"market_2"}
-                    />
+                    <Function title={"게시판"} image={"market_2"} />
                   </GridItem>
                 </GridContainer>
               </GridDiv>
               <GridDiv>
                 <GridContainer>
                   <GridItem xs={6}>
-                    <Function
-                      title={"게시판 댓글"}
-                      image={"market_3"}
-                    />
+                    <Function title={"게시판 댓글"} image={"market_3"} />
                   </GridItem>
                   <GridItem xs={6}>
-                    <Function
-                      title={"상품게시판"}
-                      image={"market_4"}
-                    />
+                    <Function title={"상품게시판"} image={"market_4"} />
                   </GridItem>
                 </GridContainer>
               </GridDiv>
               <GridDiv>
                 <GridContainer>
                   <GridItem xs={6}>
-                    <Function
-                      title={"주소검색"}
-                      image={"market_5"}
-                    />
+                    <Function title={"주소검색"} image={"market_5"} />
                   </GridItem>
                   <GridItem xs={6}>
-                    <Function
-                      title={"상품결제 시스템"}
-                      image={"market_6"}
-                    />
+                    <Function title={"상품결제 시스템"} image={"market_6"} />
                   </GridItem>
                 </GridContainer>
               </GridDiv>

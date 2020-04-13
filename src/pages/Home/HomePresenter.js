@@ -30,20 +30,13 @@ const Container = styled.div`
   background-color: "red";
 `;
 
-const Name = styled.span`
-  margin-top: 10px;
-  display: block;
-  font-size: 32px;
-  font-weight: 400;
-  text-align: center;
-`;
-
 const Role = styled.span`
   margin: 10px 0;
   display: block;
   font-size: 30px;
   color: #555555;
   font-weight: 400;
+  padding-bottom: 10px;
 `;
 
 const Description = styled.p`
@@ -63,29 +56,8 @@ const ButtonName = styled.div`
   font-weight: 300;
 `;
 
-const Line = styled.hr`
-  background: blue;
-  border-width: thin;
-`;
-
-const Backdrop = styled.div`
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(${props => props.bgImage});
-    background-position: center center;
-    background-size: cover;
-`;
-
 export default function HomePresenter() {
   const classes = useStyles();
-  const imageClasses = classNames(
-    classes.imgRaised,
-    classes.imgRoundedCircle,
-    classes.imgFluid
-  );
   return (
     <div>
       <Header

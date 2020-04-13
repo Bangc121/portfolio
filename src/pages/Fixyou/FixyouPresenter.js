@@ -204,13 +204,6 @@ export default function FixyouPresenter() {
           </SkillContainer>
           <FunctionContainer>
             <SubTitle>주요기능</SubTitle>
-            {/* <SubDetail>
-              <p>
-                FILLGI Inc.는 미국 LA와 산호세에 위치한 법인으로 글로벌 시장에서
-                태블릿과 모바일 디바이스를 넘어 다양한 플랫폼에서 활용가능한
-                노트 어플리케이션을 개발하고 있습니다.
-              </p>
-            </SubDetail> */}
             <Content>
               <GridDiv>
                 <GridContainer>

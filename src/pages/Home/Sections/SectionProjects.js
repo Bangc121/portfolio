@@ -6,6 +6,7 @@ import Project from "components/Project";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import styles from "assets/jss/material-kit-react/views/componentsSections/basicsStyle.js";
+import { Element, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 const useStyles = makeStyles(styles);
 
@@ -24,7 +25,7 @@ const Container = styled.div`
 `;
 
 const Title = styled.div`
-  padding-top: 60px;
+  padding-top: 80px;
   font-size: 30px;
   font-weight: 400;
   color: #555555;
@@ -50,6 +51,7 @@ export default function SectionProjects() {
   const classes = useStyles();
   return (
     <Container>
+      <Element name="project" className="element"></Element>
       <div className={classes.section}>
         <div className={classes.container}>
           <Title>Projects</Title>
@@ -101,9 +103,7 @@ export default function SectionProjects() {
               <Project
                 title={"EasyRadio"}
                 id={"easyradio"}
-                skill={
-                  "Android, Java, PHP, C++, Javascript, MariaDB"
-                }
+                skill={"Android, Java, PHP, C++, Javascript, MariaDB"}
                 duration={"2018.03 ~ 2018.05"}
               ></Project>
             </GridItem>

@@ -6,6 +6,7 @@ import Skill from "components/Skill";
 import styles from "assets/jss/material-kit-react/views/componentsSections/basicsStyle.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
+import { Element, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 const useStyles = makeStyles(styles);
 
@@ -24,7 +25,7 @@ const Container = styled.div`
 `;
 
 const Title = styled.div`
-  padding-top: 60px;
+  padding-top: 80px;
   font-size: 30px;
   font-weight: 400;
   color: #555555;
@@ -55,6 +56,8 @@ export default function SectionSkills() {
   const classes = useStyles();
   return (
     <Container>
+      <Element name="skill" className="element">
+      </Element>
       <div className={classes.section}>
         <div className={classes.container}>
           <Title>Skills</Title>
@@ -103,26 +106,26 @@ export default function SectionSkills() {
           </GridDiv>
           <SubTitle>Server / Framework</SubTitle>
           <GridDiv>
-          <GridContainer>
-            <GridItem xs={2}>
-              <Skill title={"Apache"} image={"apache"} />
-            </GridItem>
-            <GridItem xs={2}>
-              <Skill title={"Nginx"} image={"nginx"} />
-            </GridItem>
-            <GridItem xs={2}>
-              <Skill title={"Django"} image={"django"} />
-            </GridItem>
-            <GridItem xs={2}>
-              <Skill title={"Node.js"} image={"node"} />
-            </GridItem>
-            <GridItem xs={2}>
-              <Skill title={"Express.js"} image={"express"} />
-            </GridItem>
-            <GridItem xs={2}>
-              <Skill title={"Kurento"} image={"kurento"} />
-            </GridItem>
-          </GridContainer>
+            <GridContainer>
+              <GridItem xs={2}>
+                <Skill title={"Apache"} image={"apache"} />
+              </GridItem>
+              <GridItem xs={2}>
+                <Skill title={"Nginx"} image={"nginx"} />
+              </GridItem>
+              <GridItem xs={2}>
+                <Skill title={"Django"} image={"django"} />
+              </GridItem>
+              <GridItem xs={2}>
+                <Skill title={"Node.js"} image={"node"} />
+              </GridItem>
+              <GridItem xs={2}>
+                <Skill title={"Express.js"} image={"express"} />
+              </GridItem>
+              <GridItem xs={2}>
+                <Skill title={"Kurento"} image={"kurento"} />
+              </GridItem>
+            </GridContainer>
           </GridDiv>
           <SubTitle>Database / Cloud Service</SubTitle>
 

@@ -11,6 +11,7 @@ import "slick-carousel/slick/slick-theme.css";
 // import './SectionCustomStyle.css'
 import Slider from "react-slick";
 import Button from '@material-ui/core/Button';
+import { Element, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 const useStyles = makeStyles(styles);
 
@@ -104,12 +105,13 @@ export default function SectionBlog() {
 
   return (
     <Container>
+      <Element name="blog" className="element"></Element>
       <div className={classes.section}>
         <div className={classes.container}>
           <Title>Blog</Title>
           <Description>
             <p>
-              개발하면서 경험한 이슈들을 정리하고있는
+              개발하면서 경험한 이슈와 다양한 이야기들을 정리하고있는
               개인블로그입니다.
             </p>
           </Description>

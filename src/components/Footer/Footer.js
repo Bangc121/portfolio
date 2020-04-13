@@ -32,6 +32,9 @@ export default function Footer(props) {
         <div className={classes.left}>
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
+              <a className={classes.block}>wjdrlalf17@gmail.com</a>
+            </ListItem>
+            <ListItem className={classes.inlineBlock}>
               <a
                 href="https://bangc.tistory.com/"
                 className={classes.block}
@@ -53,13 +56,9 @@ export default function Footer(props) {
         </div>
         <div className={classes.right}>
           &copy; {1900 + new Date().getYear()} , made by{" "}
-          <a
-            className={aClasses}
-            target="_blank"
-          >
+          <a className={aClasses} target="_blank">
             junghwan Kim
           </a>{" "}
-          for a better web.
         </div>
       </div>
     </footer>

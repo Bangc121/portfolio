@@ -1,19 +1,17 @@
 /*eslint-disable*/
 import React from "react";
-import DeleteIcon from "@material-ui/icons/Delete";
-import IconButton from "@material-ui/core/IconButton";
 // react components for routing our app without refresh
-import { Link } from "react-router-dom";
-
+import Links from "react-router-dom/Link";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-
 // core components
 import Button from "components/CustomButtons/Button.js";
 
 import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js";
+
+import { Link, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 const useStyles = makeStyles(styles);
 
@@ -23,7 +21,7 @@ export default function HeaderLinks(props) {
     <List className={classes.list}>
       {" "}
       <ListItem className={classes.listItem}>
-        <Link to="/resume" className={classes.Link}>
+        <Links to="/resume" className={classes.Link}>
           <Button
             color="transparent"
             className={classes.navLink + " " + classes.socialIconsButton}
@@ -36,57 +34,84 @@ export default function HeaderLinks(props) {
                 " fab fa-facebook"
               }
             />{" "}
-            소개
+            About
+          </Button>
+        </Links>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Link
+          activeClass="active"
+          className="skill"
+          to="skill"
+          spy={true}
+          smooth={true}
+          duration={500}
+        >
+          <Button
+            color="transparent"
+            className={classes.navLink + " " + classes.socialIconsButton}
+          >
+            <i
+              className={
+                classes.socialIcons +
+                " " +
+                classes.marginRight5 +
+                " fab fa-twitter"
+              }
+            />{" "}
+            Skills
           </Button>
         </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Button
-          color="transparent"
-          className={classes.navLink + " " + classes.socialIconsButton}
+        <Link
+          activeClass="active"
+          className="project"
+          to="project"
+          spy={true}
+          smooth={true}
+          duration={500}
         >
-          <i
-            className={
-              classes.socialIcons +
-              " " +
-              classes.marginRight5 +
-              " fab fa-twitter"
-            }
-          />{" "}
-          기술스택
-        </Button>
+          <Button
+            color="transparent"
+            className={classes.navLink + " " + classes.socialIconsButton}
+          >
+            <i
+              className={
+                classes.socialIcons +
+                " " +
+                classes.marginRight5 +
+                " fab fa-facebook"
+              }
+            />{" "}
+            Projects
+          </Button>
+        </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Button
-          color="transparent"
-          className={classes.navLink + " " + classes.socialIconsButton}
+        <Link
+          activeClass="active"
+          className="blog"
+          to="blog"
+          spy={true}
+          smooth={true}
+          duration={500}
         >
-          <i
-            className={
-              classes.socialIcons +
-              " " +
-              classes.marginRight5 +
-              " fab fa-facebook"
-            }
-          />{" "}
-          프로젝트
-        </Button>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Button
-          color="transparent"
-          className={classes.navLink + " " + classes.socialIconsButton}
-        >
-          <i
-            className={
-              classes.socialIcons +
-              " " +
-              classes.marginRight5 +
-              " fab fa-instagram"
-            }
-          />{" "}
-          블로그
-        </Button>
+          <Button
+            color="transparent"
+            className={classes.navLink + " " + classes.socialIconsButton}
+          >
+            <i
+              className={
+                classes.socialIcons +
+                " " +
+                classes.marginRight5 +
+                " fab fa-instagram"
+              }
+            />{" "}
+            Blog
+          </Button>
+        </Link>
       </ListItem>
     </List>
   );

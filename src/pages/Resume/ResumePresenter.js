@@ -70,7 +70,7 @@ const History = styled.div`
 
 const HistoryTitle = styled.h2`
   font-size: 30px;
-  font-weight: 400;
+  font-weight: 300;
   color: #555555;
   line-height: 200%;
 `;
@@ -150,11 +150,11 @@ export default function ResumePresenter() {
           </Text>
           <Text>
             결국 먼저 좋은동료가 되어 좋은사람들과 좋은프로젝트를 하고싶은것이
-            저의 개인적인 바램입니다.
+            제가 추구하는 가치입니다.
           </Text>
           <br />
           <Text>
-            반갑습니다, 회사가 필요로하는 사람이 되고싶은 개발자 김정환입니다.
+            반갑습니다, 개발자 김정환입니다.
           </Text>
         </Introduce>
       </div>
@@ -226,6 +226,7 @@ export default function ResumePresenter() {
             >
               <HistotyText>FixYou</HistotyText>
               <Subtitle>친구매칭 & 라이브스트리밍 어플리케이션</Subtitle>
+              <SubDescription>개인 프로젝트</SubDescription>
             </VerticalTimelineElement>
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
@@ -246,6 +247,7 @@ export default function ResumePresenter() {
             >
               <HistotyText>EasyRadio</HistotyText>
               <Subtitle>오디오스트리밍 어플리케이션</Subtitle>
+              <SubDescription>개인 프로젝트</SubDescription>
             </VerticalTimelineElement>
             <VerticalTimelineElement
               className="vertical-timeline-element--education"
@@ -265,7 +267,8 @@ export default function ResumePresenter() {
               }
             >
               <HistotyText>프리마켓</HistotyText>
-              <Subtitle>중고거래사이트</Subtitle>
+              <Subtitle>중고거래 웹사이트</Subtitle>
+              <SubDescription>개인 프로젝트</SubDescription>
             </VerticalTimelineElement>
             <VerticalTimelineElement
               className="vertical-timeline-element--education"
@@ -285,7 +288,7 @@ export default function ResumePresenter() {
               }
             >
               <HistotyText>Ahnlab Inc.</HistotyText>
-              <Subtitle>EMS개발팀 인턴</Subtitle>
+              <Subtitle>보안회사 EMS개발팀 인턴</Subtitle>
             </VerticalTimelineElement>
             <VerticalTimelineElement
               className="vertical-timeline-element--education"
