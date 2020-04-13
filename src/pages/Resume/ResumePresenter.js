@@ -1,18 +1,14 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React from "react";
+import React, {useState, useEffect} from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-// import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react';
 // core components
 import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
-import Parallax from "components/Parallax/Parallax.js";
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
 // sections for this page
 import HeaderLinks from "components/Header/HeaderLinks.js";
 // @material-ui/icons
@@ -98,8 +94,23 @@ const SubDescription = styled.div`
   color: #555555;
   line-height: 140%;
 `;
+
+
 export default function ResumePresenter() {
   const classes = useStyles();
+  const useProgressiveImage = src => {  
+    const [sourceLoaded, setSourceLoaded] = useState(null)
+  
+    useEffect(() => {
+      const img = new Image()
+      img.src = src
+      img.onload = () => setSourceLoaded(src)
+    }, [src])
+  
+    return sourceLoaded 
+  }
+
+  const loaded = useProgressiveImage(backImage)
   return (
     <div>
       <Header
@@ -115,7 +126,7 @@ export default function ResumePresenter() {
       <Block />
       <div className={classes.container}>
         {/* <Keyword></Keyword> */}
-        <Backdrop bgImage={backImage} />
+        <Backdrop bgImage={loaded} />
         <Introduce>
           <IntroTitle>개발자 소개</IntroTitle>
           <Text>
@@ -153,9 +164,7 @@ export default function ResumePresenter() {
             제가 추구하는 가치입니다.
           </Text>
           <br />
-          <Text>
-            반갑습니다, 개발자 김정환입니다.
-          </Text>
+          <Text>반갑습니다, 개발자 김정환입니다.</Text>
         </Introduce>
       </div>
 

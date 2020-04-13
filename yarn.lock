@@ -5139,6 +5139,15 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
+gatsby-image@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.3.2.tgz#12e6cac9d6cc1a8152a35693ddf7729d5e59759f"
+  integrity sha512-xaFo2Bsox0aRvRXORLyYf9Rgzp/7aBR4aSmb8CuLLGs4c+IbeSlK0XofkLMZ9c52pxijVRfO3WLSVTB7dtHv+Q==
+  dependencies:
+    "@babel/runtime" "^7.8.7"
+    object-fit-images "^3.2.4"
+    prop-types "^15.7.2"
+
 gauge@~2.7.3:
   version "2.7.4"
   resolved "https://registry.yarnpkg.com/gauge/-/gauge-2.7.4.tgz#2c03405c7538c39d7eb37b317022e325fb018bf7"
@@ -7920,6 +7929,11 @@ object-copy@^0.1.0:
     define-property "^0.2.5"
     kind-of "^3.0.3"
 
+object-fit-images@^3.2.4:
+  version "3.2.4"
+  resolved "https://registry.yarnpkg.com/object-fit-images/-/object-fit-images-3.2.4.tgz#6c299d38fdf207746e5d2d46c2877f6f25d15b52"
+  integrity sha512-G+7LzpYfTfqUyrZlfrou/PLLLAPNC52FTy5y1CBywX+1/FkxIloOyQXBmZ3Zxa2AWO+lMF0JTuvqbr7G5e5CWg==
+
 object-hash@^2.0.1:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/object-hash/-/object-hash-2.0.3.tgz#d12db044e03cd2ca3d77c0570d87225b02e1e6ea"
@@ -9569,6 +9583,14 @@ react-is@^16.12.0, react-is@^16.3.2, react-is@^16.6.0, react-is@^16.7.0, react-i
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-lazy-load-image-component@^1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/react-lazy-load-image-component/-/react-lazy-load-image-component-1.4.3.tgz#841235111c4bbb7d69238ba7e16ded04d1461c06"
+  integrity sha512-F7SuCjqJkfRUXAcVxx3mms92mbO6W20v+utPRAQHHncT6KJF61XPo1TLL2e+9LhuA/KZkIsSr7xo7srItbVefg==
+  dependencies:
+    lodash.debounce "^4.0.8"
+    lodash.throttle "^4.1.1"
 
 react-lifecycles-compat@^3.0.4:
   version "3.0.4"
