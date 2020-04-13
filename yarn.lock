@@ -9579,6 +9579,11 @@ react-event-timeline@^1.6.3:
   dependencies:
     prop-types "^15.6.0"
 
+react-image-lazy-load-component@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/react-image-lazy-load-component/-/react-image-lazy-load-component-0.2.0.tgz#83777e5a4c65d5090468be6f0dcf953f4b767716"
+  integrity sha512-9Eyog6PsyawC70q9BiBmp9wyOsoyWV/u9S82JcLFGB/a6RC6utFANkIwyV0147hhjgPWFhiJzt1s0DMPFfSbrQ==
+
 react-is@^16.12.0, react-is@^16.3.2, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.0, react-is@^16.8.1, react-is@^16.8.4:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"

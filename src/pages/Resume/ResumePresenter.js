@@ -6,15 +6,18 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import IronImage from 'components/IronImage';
+// Import these bad boys B-|
+// import IronImage from 'react-image-lazy-load-component';
+// import 'react-image-lazy-load-component/build/ironImage.css';
 // core components
 import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
 // sections for this page
 import HeaderLinks from "components/Header/HeaderLinks.js";
-// @material-ui/icons
-import Menu from "@material-ui/icons/Menu";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+import backImage2 from "assets/img/intro3.jpg";
 import backImage from "assets/img/intro2.jpg";
 import fillgi_icon from "assets/img/icon/fillgi_icon.png";
 import tictoc_icon from "assets/img/icon/tictoc_icon.png";
@@ -75,7 +78,7 @@ const Backdrop = styled.div`
   width: 100%;
   height: 460px;
   margin: 30px 0;
-  background-image: url(${props => props.bgImage});
+  /* background-image: url(${props => props.bgImage}); */
   background-position: center center;
   background-size: cover;
 `;
@@ -98,19 +101,6 @@ const SubDescription = styled.div`
 
 export default function ResumePresenter() {
   const classes = useStyles();
-  const useProgressiveImage = src => {  
-    const [sourceLoaded, setSourceLoaded] = useState(null)
-  
-    useEffect(() => {
-      const img = new Image()
-      img.src = src
-      img.onload = () => setSourceLoaded(src)
-    }, [src])
-  
-    return sourceLoaded 
-  }
-
-  const loaded = useProgressiveImage(backImage)
   return (
     <div>
       <Header
@@ -126,7 +116,11 @@ export default function ResumePresenter() {
       <Block />
       <div className={classes.container}>
         {/* <Keyword></Keyword> */}
-        <Backdrop bgImage={loaded} />
+        {/* <Backdrop bgImage={loaded} /> */}
+
+        <Backdrop>
+          <IronImage srcPreload={backImage2} srcLoaded={backImage} />
+        </Backdrop>
         <Introduce>
           <IntroTitle>개발자 소개</IntroTitle>
           <Text>
